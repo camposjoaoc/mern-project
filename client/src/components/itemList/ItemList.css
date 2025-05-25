@@ -1,9 +1,11 @@
 .item-list-container {
   @apply w-full max-w-6xl mx-auto bg-white rounded-lg shadow p-6 mt-8;
+  @apply dark:bg-gray-500;
 }
 
 .item-list-title {
   @apply text-2xl font-bold mb-6 text-center text-blue-700;
+  @apply dark:text-blue-300;
 }
 
 .item-list-table {
@@ -12,10 +14,12 @@
 
 .item-list-th {
   @apply border-b-2 border-gray-200 px-4 py-2 text-left text-gray-700;
+  @apply dark:border-gray-600 dark:text-gray-200;
 }
 
 .item-list-td {
   @apply border-b border-gray-100 px-4 py-2;
+  @apply dark:border-gray-700 dark:text-gray-100;
 }
 
 .item-list-action-btn {
@@ -28,10 +32,12 @@
 
 .item-list-empty {
   @apply text-center text-gray-500 mt-6;
+  @apply dark:text-gray-400;
 }
 
 .item-list-input {
   @apply border border-gray-300 rounded px-2 py-1;
+  @apply dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100;
 }
 
 .item-list-error {

@@ -1,6 +1,11 @@
 .app-navbar {
-    @apply w-full bg-blue-700 py-4 mb-8 shadow;
+    @apply w-full bg-blue-700 py-4 mb-8 shadow flex items-center justify-between px-8;
 }
 
 .app-navbar-title {
-    @apply text-white text-xl font-bold text-center; }
+    @apply text-white text-xl font-bold text-center;
+}
+
+.navbar-dark-btn {
+    @apply bg-transparent border-none text-white text-2xl cursor-pointer hover:text-yellow-300 transition;
+}

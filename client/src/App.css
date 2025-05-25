@@ -1,22 +1,28 @@
 .app-container {
-  @apply min-h-screen bg-gray-50 flex flex-col items-center ;
+  @apply min-h-screen flex flex-col justify-between bg-gray-50 dark:bg-gray-900;;
+  @apply dark:bg-gray-900;
 }
 
 .app-card {
-  @apply w-full max-w-6xl bg-white rounded-lg shadow-md p-8;
+  @apply w-full max-w-6xl mx-auto bg-white rounded-lg shadow-md p-8;
+  @apply dark:bg-gray-800 dark:shadow-lg;
 }
 
 .app-title {
   @apply text-3xl font-bold text-center mb-4 text-blue-700;
+  @apply dark:text-blue-300;
 }
 
 .app-description {
   @apply text-center text-gray-600 mb-2;
+  @apply dark:text-gray-300;
 }
 
 .app-note {
   @apply text-center text-gray-500 mb-6;
+  @apply dark:text-gray-400;
 }
+
 .app-button {
   @apply bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition;
 }
