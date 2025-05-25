@@ -1,0 +1,31 @@
+.item-list-container {
+  @apply w-full max-w-xl mx-auto bg-white rounded-lg shadow p-6 mt-8;
+}
+
+.item-list-title {
+  @apply text-2xl font-bold mb-6 text-center text-blue-700;
+}
+
+.item-list-table {
+  @apply w-full border-collapse mb-4;
+}
+
+.item-list-th {
+  @apply border-b-2 border-gray-200 px-4 py-2 text-left text-gray-700;
+}
+
+.item-list-td {
+  @apply border-b border-gray-100 px-4 py-2;
+}
+
+.item-list-action-btn {
+  @apply bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded transition;
+}
+
+.item-list-refresh-btn {
+  @apply block mx-auto mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded transition;
+}
+
+.item-list-empty {
+  @apply text-center text-gray-500 mt-6;
+}

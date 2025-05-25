@@ -1,0 +1,19 @@
+.app-container {
+  @apply min-h-screen bg-gray-50 flex flex-col items-center py-10;
+}
+
+.app-card {
+  @apply w-full max-w-xl bg-white rounded-lg shadow-md p-8;
+}
+
+.app-title {
+  @apply text-3xl font-bold text-center mb-4 text-blue-700;
+}
+
+.app-description {
+  @apply text-center text-gray-600 mb-2;
+}
+
+.app-note {
+  @apply text-center text-gray-500 mb-6;
+}
