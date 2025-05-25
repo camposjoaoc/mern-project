@@ -17,7 +17,7 @@ const ItemList = () => {
 
     const fetchItems = async () => {
         try {
-            const response = await axios.get("https://mern-project-vert-ten.vercel.app/api/items");
+            const response = await axios.get("https://mern-project-server-seven.vercel.app/api/items");
             setItems(response.data);
             setError("");
         } catch (error) {
@@ -28,7 +28,7 @@ const ItemList = () => {
 
     const fetchByName = async () => {
         try {
-            const response = await axios.get(`https://mern-project-vert-ten.vercel.app/api/items/name/${searchName}`);
+            const response = await axios.get(`https://mern-project-server-seven.vercel.app/api/items/name/${searchName}`);
             setItems(response.data);
             setError("");
         } catch (error) {
@@ -39,7 +39,7 @@ const ItemList = () => {
 
     const fetchByQuantity = async () => {
         try {
-            const response = await axios.get(`https://mern-project-vert-ten.vercel.app/api/items/quantity/${searchQuantity}`);
+            const response = await axios.get(`https://mern-project-server-seven.vercel.app/api/items/quantity/${searchQuantity}`);
             setItems(response.data);
             setError("");
         } catch (error) {
@@ -52,6 +52,7 @@ const ItemList = () => {
         try {
             await axios.delete(`https://mern-project-vert-ten.vercel.app/api/items/${id}`);
             setItems(items.filter(item => item._id !== id));
+            fetchItems(); // Refresh the list after deletion
         } catch (error) {
             setError("Error deleting item");
         }
