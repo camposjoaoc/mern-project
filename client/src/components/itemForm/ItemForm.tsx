@@ -10,7 +10,7 @@ export const ItemForm = () => {
 
     const createItem = async () => {
         try {
-            await axios.post("http://localhost:3001/api/items", { name, quantity });
+            await axios.post("https://mern-project-vert-ten.vercel.app/api/items", { name, quantity });
             setShowToast(true);
             setTimeout(() => setShowToast(false), 5000);
             setName("");
