@@ -1,0 +1,30 @@
+.app-footer {
+    @apply mt-8 text-center text-gray-400 text-sm flex flex-col items-center gap-2 pb-4;
+}
+
+.footer-icons {
+    @apply flex gap-4 justify-center mb-1;
+}
+
+.footer-icon {
+    @apply w-6 h-6 text-gray-500 hover:text-blue-700 transition-colors duration-200;
+}
+
+.footer-text {
+    @apply text-gray-600;
+}
+
+.footer-text a {
+    @apply text-blue-700 hover:underline;
+}
+
+.footer-stacks {
+    @apply flex flex-wrap gap-2 justify-center mt-1;
+}
+
+.footer-stack {
+    @apply bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium;
+}
+
+.footer-copyright {
+    @apply mt-1 text-xs text-gray-400; }

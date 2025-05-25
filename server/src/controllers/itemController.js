@@ -13,7 +13,7 @@ export const getAllItems = async (req, res) => {
 // GET /items/name/laptop
 export const getItemByName = async (req, res) => {
     try {
-        const filteredItems = await Item.find({ item: "Laptop" });
+        const filteredItems = await Item.find({ name: "Laptop" });
         if (filteredItems.length === 0) {
             return res.status(404).json({ message: 'No items found!' });
         }
@@ -98,9 +98,9 @@ export const getItemsSortedDesc = async (req, res) => {
 // POST /items
 export const createItem = async (req, res) => {
     try {
-        const { item, quantity } = req.body;
+        const { name, quantity } = req.body;
 
-        if (!item || quantity === undefined) {
+        if (!name || quantity === undefined) {
             return res.status(400).json({ message: 'Item and quantity are required' });
         }
 
@@ -108,8 +108,7 @@ export const createItem = async (req, res) => {
         if (isNaN(parsedQuantity) || parsedQuantity < 0) {
             return res.status(400).json({ message: 'Quantity must be a non-negative number' });
         }
-
-        const newItem = new Item({ item, quantity: parsedQuantity });
+        const newItem = new Item({ name, quantity: parsedQuantity });
         await newItem.save();
         res.status(201).json(newItem);
     } catch (error) {
@@ -196,4 +195,6 @@ export const deleteItemById = async (req, res) => {
         res.status(500).json({ message: 'Error deleting item' });
     }
 };
+
+
 

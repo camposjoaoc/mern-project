@@ -1,5 +1,5 @@
 .item-list-container {
-  @apply w-full max-w-xl mx-auto bg-white rounded-lg shadow p-6 mt-8;
+  @apply w-full max-w-6xl mx-auto bg-white rounded-lg shadow p-6 mt-8;
 }
 
 .item-list-title {
@@ -28,4 +28,12 @@
 
 .item-list-empty {
   @apply text-center text-gray-500 mt-6;
+}
+
+.item-list-input {
+  @apply border border-gray-300 rounded px-2 py-1;
+}
+
+.item-list-error {
+  @apply text-red-500 mb-2 text-center;
 }

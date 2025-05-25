@@ -21,3 +21,7 @@
 .item-form-button {
   @apply w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition;
 }
+
+.item-toast {
+  @apply fixed top-6 right-6 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50 transition-opacity duration-300;
+}

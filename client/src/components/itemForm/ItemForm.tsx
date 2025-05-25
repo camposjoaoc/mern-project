@@ -6,11 +6,16 @@ export const ItemForm = () => {
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [error, setError] = useState("");
+    const [showToast, setShowToast] = useState(false);
 
     const createItem = async () => {
         try {
-            await axios.post("http://localhost:5001/items", { name, quantity });
-            alert("Item created successfully!");
+            await axios.post("http://localhost:3001/api/items", { name, quantity });
+            setShowToast(true);
+            setTimeout(() => setShowToast(false), 5000);
+            setName("");
+            setQuantity(1);
+            setError("");
         } catch (error) {
             console.error("Error creating item:", error);
             setError("Failed to create item. Please try again.");
@@ -19,6 +24,11 @@ export const ItemForm = () => {
 
     return (
         <div className="item-form-container">
+            {showToast && (
+                <div className="item-toast">
+                    Item created successfully!
+                </div>
+            )}
             <h1 className="item-form-title">Create Item</h1>
             <form onSubmit={(e) => {
                 e.preventDefault();
